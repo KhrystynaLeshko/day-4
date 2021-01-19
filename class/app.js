@@ -62,4 +62,83 @@ const teachingStaff = [person, person2];
 
 console.log(teachingStaff[1].hobbies[2]);
 console.log(teachingStaff[1].isBald.toString().toUpperCase());
-console.log(teachingStaff[0].isHealthy.toString().toUpperCase());
+// console.log(teachingStaff[0].isHealthy.toString().toUpperCase());
+console.clear();
+const student1 = {
+  name: "John",
+  job: "Student",
+  ageAccordingToGoogle: 18,
+  age: 37,
+  from: "DR",
+  isBald: false,
+  hobbies: ["music", "bouldering", "comics"],
+  isHealthy: true,
+  hasPreviousCareer: true,
+};
+const student2 = {
+  name: "Brittney",
+  job: "Tech Specialist",
+  ageAccordingToGoogle: 29,
+  from: "US",
+  age: 29,
+  isBald: "truthy",
+  hobbies: ["volleyball", "surfing", "snowboarding"],
+  isHealthy: true,
+  hasPreviousCareer: true,
+};
+
+const student3 = {
+  name: "Tadej",
+  from: "Eslovenia",
+  job: "Product Specialist",
+  ageAccordingToGoogle: 20,
+  age: 32,
+  isBald: false,
+  hobbies: ["surfing", "sailing"],
+  isHealthy: true,
+  hasPreviousCareer: true,
+};
+
+const student4 = {
+  name: "Luca",
+  from: "Belgium",
+  job: "Technical Writer",
+  ageAccordingToGoogle: 16,
+  age: 31,
+  isBald: false,
+  hobbies: ["writing", "running", "bouldering"],
+  isHealthy: true,
+  hasPreviousCareer: true,
+};
+
+const studentArr = [student1, student2, student3, student4];
+
+function printAllHobbies(arr) {
+  //   let hobbieArr = [];
+  //   for (let student of arr) {
+  //     for (let hobbie of student.hobbies) {
+  //       hobbieArr.push(hobbie);
+  //     }
+  //   }
+  //   return hobbieArr;
+  //   console.log(
+  //     `${studentArr[0].hobbies} ${studentArr[1].hobbies} ${studentArr[2].hobbies} ${studentArr[3].hobbies}`
+  //   );
+  const studentArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].hobbies.length; j++) {
+      studentArr.push(arr[i].hobbies[j]);
+    }
+  }
+
+  //   arr.forEach(function (student) {
+  //     student.hobbies.forEach(function (hobbie) {
+  //       studentArr.push(hobbie);
+  //     });
+  //   });
+  console.log("studentArr:", studentArr);
+}
+
+printAllHobbies(studentArr); // ["music", "bouldering", "comics", "surfing", "sailing", "volleyball", "surfing", "snowboarding", "writing", "running", "bouldering"]
+
+console.log(printAllHobbies(studentArr));
